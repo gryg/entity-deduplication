@@ -1,0 +1,90 @@
+2025-04-01 15:25:03,534 - entity_resolution - INFO - Registered approach: Scalable Deterministic Feature Entity Resolution
+2025-04-01 15:25:03,534 - entity_resolution - INFO - Loading data from ./veridion_entity_resolution_challenge.snappy.parquet...
+2025-04-01 15:25:03,791 - entity_resolution - INFO - Loaded 33446 records with 75 columns
+2025-04-01 15:25:03,792 - entity_resolution - INFO - Running approach: Scalable Deterministic Feature Entity Resolution
+2025-04-01 15:25:03,792 - entity_resolution - INFO - Running entity resolution with Scalable Deterministic Feature Entity Resolution...
+2025-04-01 15:25:03,815 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Preprocessing data...
+2025-04-01 15:25:05,747 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Using advanced blocking for 33446 records
+2025-04-01 15:25:05,747 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Finding matches using advanced blocking strategies...
+2025-04-01 15:25:06,520 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Created 32284 deterministic blocks with 430,936 potential comparisons
+2025-04-01 15:25:06,647 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Created 9107 name token blocks
+2025-04-01 15:25:06,673 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Created 41391 blocks (avg size: 4.9) in 0.92s
+2025-04-01 15:25:06,695 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Processing 15596 high-confidence blocks...
+2025-04-01 15:25:24,033 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Found 148128 matches from high confidence blocks
+2025-04-01 15:25:24,033 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Total matches so far: 148128
+2025-04-01 15:25:24,033 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Processing 12341 medium-confidence blocks...
+2025-04-01 15:25:44,604 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Found 21208 matches from medium confidence blocks
+2025-04-01 15:25:44,604 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Total matches so far: 169336
+2025-04-01 15:25:44,604 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Processing 9107 low-confidence blocks...
+2025-04-01 15:26:09,490 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Found 93042 matches from low confidence blocks
+2025-04-01 15:26:09,490 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Total matches so far: 262378
+2025-04-01 15:26:09,490 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Total: 262378 matches from 1,301,407 comparisons
+2025-04-01 15:26:09,490 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Efficiency: Performed 1,301,407 comparisons out of 559,300,735 possible (0.2327%)
+2025-04-01 15:26:09,719 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Creating clusters...
+2025-04-01 15:26:09,719 - entity_resolution - INFO - Creating clusters from matches...
+2025-04-01 15:26:10,035 - entity_resolution - INFO - Finding connected components...
+2025-04-01 15:26:10,116 - entity_resolution - INFO - Found 683 initial clusters
+2025-04-01 15:26:10,116 - entity_resolution - INFO - Found 1 suspicious large clusters
+2025-04-01 15:26:18,762 - entity_resolution - INFO - Split cluster 0 into 98 sub-clusters
+2025-04-01 15:26:18,770 - entity_resolution - INFO - Final cluster count: 780
+2025-04-01 15:26:18,770 - entity_resolution - INFO - Largest cluster size: 628
+2025-04-01 15:26:18,801 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Creating canonical records...
+2025-04-01 15:26:18,802 - entity_resolution - INFO - Creating canonical records...
+2025-04-01 15:26:27,718 - entity_resolution - WARNING - [Scalable Deterministic Feature Entity Resolution] SAFETY CHECK FAILED: Deduplication rate 97.67% exceeds maximum 40.00%
+2025-04-01 15:26:27,718 - entity_resolution - WARNING - [Scalable Deterministic Feature Entity Resolution] This suggests a problem with the matching algorithm or parameters
+2025-04-01 15:26:27,718 - entity_resolution - WARNING - [Scalable Deterministic Feature Entity Resolution] Falling back to a more conservative approach...
+2025-04-01 15:26:27,718 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Rerunning with stricter match threshold: 0.95
+2025-04-01 15:26:27,718 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Preprocessing data...
+2025-04-01 15:26:29,725 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Using advanced blocking for 33446 records
+2025-04-01 15:26:29,725 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Finding matches using advanced blocking strategies...
+2025-04-01 15:26:30,394 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Created 32284 deterministic blocks with 430,936 potential comparisons
+2025-04-01 15:26:30,537 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Created 9107 name token blocks
+2025-04-01 15:26:30,560 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Created 41391 blocks (avg size: 4.9) in 0.83s
+2025-04-01 15:26:30,586 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Processing 15596 high-confidence blocks...
+2025-04-01 15:26:48,227 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Found 0 matches from high confidence blocks
+2025-04-01 15:26:48,242 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Total matches so far: 0
+2025-04-01 15:26:48,242 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Processing 12341 medium-confidence blocks...
+2025-04-01 15:27:10,817 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Found 0 matches from medium confidence blocks
+2025-04-01 15:27:10,833 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Total matches so far: 0
+2025-04-01 15:27:10,833 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Processing 9107 low-confidence blocks...
+2025-04-01 15:27:36,520 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Found 0 matches from low confidence blocks
+2025-04-01 15:27:36,522 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Total matches so far: 0
+2025-04-01 15:27:36,522 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Total: 0 matches from 1,301,407 comparisons
+2025-04-01 15:27:36,522 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Efficiency: Performed 1,301,407 comparisons out of 559,300,735 possible (0.2327%)
+2025-04-01 15:27:36,751 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Creating clusters...
+2025-04-01 15:27:36,751 - entity_resolution - INFO - Creating clusters from matches...
+2025-04-01 15:27:36,769 - entity_resolution - INFO - Finding connected components...
+2025-04-01 15:27:36,804 - entity_resolution - INFO - Found 33446 initial clusters
+2025-04-01 15:27:36,815 - entity_resolution - INFO - Final cluster count: 33446
+2025-04-01 15:27:36,827 - entity_resolution - INFO - Largest cluster size: 1
+2025-04-01 15:27:36,854 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Creating canonical records...
+2025-04-01 15:27:36,854 - entity_resolution - INFO - Creating canonical records...
+2025-04-01 15:28:24,803 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Resolution completed: 0 matches found from 1,301,407 comparisons
+2025-04-01 15:28:24,803 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Comparison rate: 11115.06 comparisons/second
+2025-04-01 15:28:24,803 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution (Conservative Fallback)] Deduplication rate: 0.00%
+2025-04-01 15:28:24,855 - entity_resolution - INFO - Entity resolution completed in 201.04 seconds
+2025-04-01 15:28:24,884 - entity_resolution - ERROR - Error running approach Scalable Deterministic Feature Entity Resolution: [Errno 13] Permission denied: 'results\\scalable_deterministic_feature_entity_resolution\\resolved_data.csv'
+2025-04-01 15:28:24,986 - entity_resolution - ERROR - Traceback (most recent call last):
+  File "C:\Projects\veridion_tasks\modular_framework\comparison.py", line 91, in run_all_approaches
+    approach.save_results(self.output_dir, result_df, canonical_df)
+  File "C:\Projects\veridion_tasks\modular_framework\base.py", line 158, in save_results
+    save_results(self.name, output_dir, result_df, canonical_df, self.performance_metrics)
+  File "C:\Projects\veridion_tasks\modular_framework\utils.py", line 247, in save_results
+    result_df.to_csv(os.path.join(approach_dir, "resolved_data.csv"), index=False)
+  File "C:\Python311\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandas\core\generic.py", line 3967, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandas\io\formats\format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "C:\Python311\Lib\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+PermissionError: [Errno 13] Permission denied: 'results\\scalable_deterministic_feature_entity_resolution\\resolved_data.csv'
+
+2025-04-01 15:28:25,005 - entity_resolution - WARNING - No results to compare. Run approaches first.

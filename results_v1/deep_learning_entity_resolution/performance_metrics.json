@@ -1,0 +1,19 @@
+{
+  "total_records": 33446,
+  "unique_entities": 248,
+  "deduplication_rate": 99.25850624887879,
+  "average_cluster_size": 134.86290322580646,
+  "median_cluster_size": 1.0,
+  "largest_cluster_size": 1758,
+  "singleton_clusters": 181,
+  "processing_time": 182.292979,
+  "cluster_size_distribution": {
+    "1 record": 181,
+    "2-5 records": 2,
+    "6-10 records": 0,
+    "11-20 records": 0,
+    "21-50 records": 0,
+    "51-100 records": 0,
+    "101+ records": 65
+  }
+}

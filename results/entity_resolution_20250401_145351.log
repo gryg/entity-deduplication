@@ -1,0 +1,42 @@
+2025-04-01 14:53:51,161 - entity_resolution - INFO - Registered approach: Deterministic Feature Entity Resolution
+2025-04-01 14:53:51,161 - entity_resolution - INFO - Loading data from .\veridion_entity_resolution_challenge.snappy.parquet...
+2025-04-01 14:53:51,415 - entity_resolution - INFO - Loaded 33446 records with 75 columns
+2025-04-01 14:53:51,415 - entity_resolution - INFO - Using sample of 1000 records
+2025-04-01 14:53:51,439 - entity_resolution - INFO - Running approach: Deterministic Feature Entity Resolution
+2025-04-01 14:53:51,439 - entity_resolution - INFO - Running entity resolution with Deterministic Feature Entity Resolution...
+2025-04-01 14:53:51,439 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Preprocessing data...
+2025-04-01 14:53:51,524 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Finding matches using deterministic features...
+2025-04-01 14:53:51,545 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Created 174 deterministic blocks with 217 potential comparisons
+2025-04-01 14:53:51,582 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Found 217 matches from deterministic blocks
+2025-04-01 14:53:51,582 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Performing systematic comparison of up to 499,500 remaining pairs
+2025-04-01 14:54:01,806 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Progress: 10% (49,950 of 499,500 comparisons)
+2025-04-01 14:54:11,729 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Progress: 20% (99,900 of 499,500 comparisons)
+2025-04-01 14:54:21,776 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Progress: 30% (149,850 of 499,500 comparisons)
+2025-04-01 14:54:31,957 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Progress: 40% (199,800 of 499,500 comparisons)
+2025-04-01 14:54:41,852 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Progress: 50% (249,750 of 499,500 comparisons)
+2025-04-01 14:54:52,048 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Progress: 60% (299,700 of 499,500 comparisons)
+2025-04-01 14:55:02,012 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Progress: 70% (349,650 of 499,500 comparisons)
+2025-04-01 14:55:11,546 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Progress: 80% (399,600 of 499,500 comparisons)
+2025-04-01 14:55:20,943 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Progress: 90% (449,550 of 499,500 comparisons)
+2025-04-01 14:55:30,806 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Progress: 100% (499,500 of 499,500 comparisons)
+2025-04-01 14:55:30,814 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Found 332 matches from 499,500 comparisons
+2025-04-01 14:55:30,894 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Creating clusters...
+2025-04-01 14:55:30,894 - entity_resolution - INFO - Creating clusters from matches...
+2025-04-01 14:55:30,894 - entity_resolution - INFO - Finding connected components...
+2025-04-01 14:55:30,894 - entity_resolution - INFO - Found 710 initial clusters
+2025-04-01 14:55:30,894 - entity_resolution - INFO - Final cluster count: 710
+2025-04-01 14:55:30,894 - entity_resolution - INFO - Largest cluster size: 11
+2025-04-01 14:55:30,904 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Creating canonical records...
+2025-04-01 14:55:30,904 - entity_resolution - INFO - Creating canonical records...
+2025-04-01 14:55:32,154 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Resolution completed: 332 matches found from 499500 comparisons
+2025-04-01 14:55:32,154 - entity_resolution - INFO - [Deterministic Feature Entity Resolution] Deduplication rate: 29.00%
+2025-04-01 14:55:32,154 - entity_resolution - INFO - Entity resolution completed in 100.71 seconds
+2025-04-01 14:55:32,271 - entity_resolution - INFO - Results saved to results\deterministic_feature_entity_resolution
+2025-04-01 14:55:32,271 - entity_resolution - INFO - Completed approach: Deterministic Feature Entity Resolution
+2025-04-01 14:55:32,271 - entity_resolution - INFO - Found 710 unique entities (deduplication rate: 29.00%)
+2025-04-01 14:55:32,271 - entity_resolution - INFO - Comparing approaches...
+2025-04-01 14:55:32,271 - entity_resolution - INFO - Comparison saved to results\approach_comparison.csv
+2025-04-01 14:55:32,290 - entity_resolution - INFO - Cluster size distribution comparison saved to results\cluster_size_distribution_comparison.csv
+2025-04-01 14:55:32,290 - entity_resolution - INFO - At least two approaches required for pairwise agreement comparison
+2025-04-01 14:55:32,291 - entity_resolution - INFO - Generating comparison visualizations...
+2025-04-01 14:55:34,372 - entity_resolution - INFO - Comparison visualizations saved to results\visualizations

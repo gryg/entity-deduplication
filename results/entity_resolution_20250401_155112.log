@@ -1,0 +1,41 @@
+2025-04-01 15:51:12,414 - entity_resolution - INFO - Registered approach: Scalable Deterministic Feature Entity Resolution
+2025-04-01 15:51:12,414 - entity_resolution - INFO - Loading data from ./veridion_entity_resolution_challenge.snappy.parquet...
+2025-04-01 15:51:12,678 - entity_resolution - INFO - Loaded 33446 records with 75 columns
+2025-04-01 15:51:12,680 - entity_resolution - INFO - Running approach: Scalable Deterministic Feature Entity Resolution
+2025-04-01 15:51:12,680 - entity_resolution - INFO - Running entity resolution with Scalable Deterministic Feature Entity Resolution...
+2025-04-01 15:51:12,708 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Preprocessing data...
+2025-04-01 15:51:14,722 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Using high-precision deterministic matching
+2025-04-01 15:51:14,722 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Running high-precision deterministic matching
+2025-04-01 15:51:16,394 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Found 1 potential matches from domain exact matches
+2025-04-01 15:51:16,413 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Found 1 potential matches from phone exact matches
+2025-04-01 15:51:16,415 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Found 1 potential matches from email exact matches
+2025-04-01 15:51:16,431 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Found 1 potential matches from name_and_location exact matches
+2025-04-01 15:51:16,448 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Found 1 potential matches from social_media exact matches
+2025-04-01 15:51:16,449 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Validating 184241 potential matches
+2025-04-01 15:51:51,522 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Found 173830 valid matches from 184241 comparisons
+2025-04-01 15:51:51,542 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Found 173830 high-precision matches
+2025-04-01 15:51:51,542 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Creating clusters...
+2025-04-01 15:51:51,543 - entity_resolution - INFO - Creating clusters from matches...
+2025-04-01 15:51:51,727 - entity_resolution - INFO - Finding connected components...
+2025-04-01 15:51:51,767 - entity_resolution - INFO - Found 6078 initial clusters
+2025-04-01 15:51:51,767 - entity_resolution - INFO - Found 4 suspicious large clusters
+2025-04-01 15:51:51,788 - entity_resolution - INFO - Split cluster 235 into 20 sub-clusters
+2025-04-01 15:51:51,788 - entity_resolution - INFO - Split cluster 282 into 8 sub-clusters
+2025-04-01 15:51:51,795 - entity_resolution - INFO - Split cluster 380 into 9 sub-clusters
+2025-04-01 15:51:51,823 - entity_resolution - INFO - Final cluster count: 6112
+2025-04-01 15:51:51,823 - entity_resolution - INFO - Largest cluster size: 56
+2025-04-01 15:51:51,851 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Creating canonical records...
+2025-04-01 15:51:51,851 - entity_resolution - INFO - Creating canonical records...
+2025-04-01 15:52:06,375 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Resolution completed: 173830 matches found from 184,241 comparisons
+2025-04-01 15:52:06,375 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Comparison rate: 3433.01 comparisons/second
+2025-04-01 15:52:06,375 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Deduplication rate: 81.73%
+2025-04-01 15:52:06,399 - entity_resolution - INFO - Entity resolution completed in 53.69 seconds
+2025-04-01 15:52:08,349 - entity_resolution - INFO - Results saved to results\scalable_deterministic_feature_entity_resolution
+2025-04-01 15:52:08,349 - entity_resolution - INFO - Completed approach: Scalable Deterministic Feature Entity Resolution
+2025-04-01 15:52:08,349 - entity_resolution - INFO - Found 6112 unique entities (deduplication rate: 81.73%)
+2025-04-01 15:52:08,349 - entity_resolution - INFO - Comparing approaches...
+2025-04-01 15:52:08,349 - entity_resolution - INFO - Comparison saved to results\approach_comparison.csv
+2025-04-01 15:52:08,367 - entity_resolution - INFO - Cluster size distribution comparison saved to results\cluster_size_distribution_comparison.csv
+2025-04-01 15:52:08,367 - entity_resolution - INFO - At least two approaches required for pairwise agreement comparison
+2025-04-01 15:52:08,367 - entity_resolution - INFO - Generating comparison visualizations...
+2025-04-01 15:52:10,015 - entity_resolution - INFO - Comparison visualizations saved to results\visualizations

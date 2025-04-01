@@ -1,0 +1,72 @@
+2025-04-01 15:06:12,593 - entity_resolution - INFO - Registered approach: Scalable Deterministic Feature Entity Resolution
+2025-04-01 15:06:12,593 - entity_resolution - INFO - Loading data from .\veridion_entity_resolution_challenge.snappy.parquet...
+2025-04-01 15:06:12,851 - entity_resolution - INFO - Loaded 33446 records with 75 columns
+2025-04-01 15:06:12,851 - entity_resolution - INFO - Running approach: Scalable Deterministic Feature Entity Resolution
+2025-04-01 15:06:12,851 - entity_resolution - INFO - Running entity resolution with Scalable Deterministic Feature Entity Resolution...
+2025-04-01 15:06:12,851 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Preprocessing data...
+2025-04-01 15:06:14,785 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Using advanced blocking for 33446 records
+2025-04-01 15:06:14,785 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Finding matches using advanced blocking strategies...
+2025-04-01 15:06:15,428 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Created 32284 deterministic blocks with 430,936 potential comparisons
+2025-04-01 15:06:15,554 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Created 9107 name token blocks
+2025-04-01 15:06:15,577 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Created 41391 blocks (avg size: 4.9) in 0.79s
+2025-04-01 15:06:15,602 - entity_resolution - INFO - [Scalable Deterministic Feature Entity Resolution] Processing 15596 high-confidence blocks...
+2025-04-01 15:06:15,660 - entity_resolution - ERROR - Error in Scalable Deterministic Feature Entity Resolution: Can't pickle local object 'DeterministicFeatureResolver._process_blocks_parallel.<locals>.process_block'
+2025-04-01 15:06:15,687 - entity_resolution - ERROR - Traceback (most recent call last):
+  File "C:\Projects\veridion_tasks\modular_framework\base.py", line 133, in run_entity_resolution
+    result_df, canonical_df = self._run_resolution(df)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\veridion_tasks\modular_framework\resolvers\deterministic_feature.py", line 128, in _run_resolution
+    matches = self._find_matches_with_advanced_blocking(processed_df)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\veridion_tasks\modular_framework\resolvers\deterministic_feature.py", line 232, in _find_matches_with_advanced_blocking
+    level_matches, level_comparisons, level_compared = self._process_blocks_parallel(df, blocks, compared_pairs)
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\veridion_tasks\modular_framework\resolvers\deterministic_feature.py", line 674, in _process_blocks_parallel
+    results = pool.map(process_block, block_items)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\multiprocessing\pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\multiprocessing\pool.py", line 774, in get
+    raise self._value
+  File "C:\Python311\Lib\multiprocessing\pool.py", line 540, in _handle_tasks
+    put(task)
+  File "C:\Python311\Lib\multiprocessing\connection.py", line 205, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+AttributeError: Can't pickle local object 'DeterministicFeatureResolver._process_blocks_parallel.<locals>.process_block'
+
+2025-04-01 15:06:15,687 - entity_resolution - ERROR - Error running approach Scalable Deterministic Feature Entity Resolution: Can't pickle local object 'DeterministicFeatureResolver._process_blocks_parallel.<locals>.process_block'
+2025-04-01 15:06:15,699 - entity_resolution - ERROR - Traceback (most recent call last):
+  File "C:\Projects\veridion_tasks\modular_framework\comparison.py", line 88, in run_all_approaches
+    result_df, canonical_df = approach.run_entity_resolution(self.df)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\veridion_tasks\modular_framework\base.py", line 133, in run_entity_resolution
+    result_df, canonical_df = self._run_resolution(df)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\veridion_tasks\modular_framework\resolvers\deterministic_feature.py", line 128, in _run_resolution
+    matches = self._find_matches_with_advanced_blocking(processed_df)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\veridion_tasks\modular_framework\resolvers\deterministic_feature.py", line 232, in _find_matches_with_advanced_blocking
+    level_matches, level_comparisons, level_compared = self._process_blocks_parallel(df, blocks, compared_pairs)
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\veridion_tasks\modular_framework\resolvers\deterministic_feature.py", line 674, in _process_blocks_parallel
+    results = pool.map(process_block, block_items)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\multiprocessing\pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\multiprocessing\pool.py", line 774, in get
+    raise self._value
+  File "C:\Python311\Lib\multiprocessing\pool.py", line 540, in _handle_tasks
+    put(task)
+  File "C:\Python311\Lib\multiprocessing\connection.py", line 205, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+AttributeError: Can't pickle local object 'DeterministicFeatureResolver._process_blocks_parallel.<locals>.process_block'
+
+2025-04-01 15:06:15,702 - entity_resolution - WARNING - No results to compare. Run approaches first.

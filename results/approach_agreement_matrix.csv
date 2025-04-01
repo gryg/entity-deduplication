@@ -1,0 +1,7 @@
+,ML-based Entity Resolution,Rule-based Entity Resolution,Graph-based Entity Resolution,Semantic Matching Entity Resolution,Deep Learning Entity Resolution,Scalable Deterministic Feature Entity Resolution
+ML-based Entity Resolution,1.0,0.9761,0.9737,0.9771,0.9758,0.9747
+Rule-based Entity Resolution,0.9761,1.0,0.9951,0.9969,0.9767,0.9966
+Graph-based Entity Resolution,0.9737,0.9951,1.0,0.9959,0.9775,0.997
+Semantic Matching Entity Resolution,0.9771,0.9969,0.9959,1.0,0.9835,0.9998
+Deep Learning Entity Resolution,0.9758,0.9767,0.9775,0.9835,1.0,0.982
+Scalable Deterministic Feature Entity Resolution,0.9747,0.9966,0.997,0.9998,0.982,1.0

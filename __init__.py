@@ -12,7 +12,8 @@ from resolvers import (
     GraphBasedResolver,
     MLEntityResolver,
     SemanticMatchingResolver,
-    DeepLearningResolver
+    DeepLearningResolver,
+    DeterministicFeatureResolver
 )
 
 __all__ = [
@@ -22,5 +23,6 @@ __all__ = [
     'GraphBasedResolver',
     'MLEntityResolver',
     'SemanticMatchingResolver',
-    'DeepLearningResolver'
+    'DeepLearningResolver',
+    'DeterministicFeatureResolver'
 ]

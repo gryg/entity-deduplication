@@ -17,6 +17,7 @@ from resolvers.graph_based import GraphBasedResolver
 from resolvers.ml_based import MLEntityResolver
 from resolvers.semantic_matching import SemanticMatchingResolver
 from resolvers.deep_learning import DeepLearningResolver
+from resolvers.deterministic_feature import DeterministicFeatureResolver
 from comparison import EntityResolutionComparison
 from utils import setup_logging
 
@@ -31,7 +32,13 @@ def parse_arguments():
     parser.add_argument("--sample-size", type=int,
                         help="Sample size for testing with smaller dataset")
     parser.add_argument("--approaches", type=str, default="ALL",
-                        help="Comma-separated list of approaches to run (ML,RULE,GRAPH,SEMANTIC,DEEP or ALL)")
+                        help="Comma-separated list of approaches to run (ML,RULE,GRAPH,SEMANTIC,DEEP,DETERMINISTIC or ALL)")
+    parser.add_argument("--max-comparisons", type=int, default=None,
+                        help="Maximum number of pairwise comparisons to perform (for large datasets)")
+    parser.add_argument("--n-jobs", type=int, default=-1,
+                        help="Number of parallel jobs to use (-1 for all available cores)")
+    parser.add_argument("--block-size-limit", type=int, default=1000,
+                        help="Maximum number of records in a block (prevent quadratic explosion)")
     
     return parser.parse_args()
 
@@ -55,7 +62,7 @@ def main():
     
     # Determine which approaches to run
     if args.approaches.upper() == "ALL":
-        approaches_to_run = ["ML", "RULE", "GRAPH", "SEMANTIC", "DEEP"]
+        approaches_to_run = ["ML", "RULE", "GRAPH", "SEMANTIC", "DEEP", "DETERMINISTIC"]
     else:
         approaches_to_run = [a.strip().upper() for a in args.approaches.split(",")]
     
@@ -71,6 +78,16 @@ def main():
             comparison.register_approach(SemanticMatchingResolver(similarity_threshold=0.7, use_tfidf=True))
         elif approach == "DEEP":
             comparison.register_approach(DeepLearningResolver(match_threshold=0.5, model_type='feedforward'))
+        elif approach == "DETERMINISTIC":
+            comparison.register_approach(DeterministicFeatureResolver(
+                match_threshold=0.75, 
+                max_comparisons=args.max_comparisons,
+                n_jobs=args.n_jobs,
+                use_advanced_blocking=True,
+                use_progressive_resolution=True,
+                block_size_limit=args.block_size_limit,
+                max_deduplication_rate=0.40
+            ))
         else:
             logger.warning(f"Unknown approach: {approach}")
     

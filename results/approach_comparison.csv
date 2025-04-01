@@ -1,0 +1,7 @@
+Approach,Unique Entities,Deduplication Rate (%),Largest Cluster Size,Processing Time (s),Singleton Ratio (%)
+ML-based Entity Resolution,399,98.80703223105903,2684,169.170498,81.70426065162907
+Rule-based Entity Resolution,8742,73.86234527297734,343,222.611732,80.67947838023336
+Graph-based Entity Resolution,7240,78.35316629791306,297,78.913049,79.24033149171271
+Semantic Matching Entity Resolution,31039,7.196675237696586,33,649.559141,97.13586133573891
+Deep Learning Entity Resolution,250,99.25252646056329,1856,188.494913,72.39999999999999
+Scalable Deterministic Feature Entity Resolution,6105,81.74669616695569,56,62.104393,15.217035217035216

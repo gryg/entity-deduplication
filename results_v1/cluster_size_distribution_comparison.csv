@@ -1,0 +1,6 @@
+,1 record,2-5 records,6-10 records,11-20 records,21-50 records,51-100 records,101+ records
+ML-based Entity Resolution,428,5,0,0,2,1,68
+Rule-based Entity Resolution,7053,1344,157,48,17,15,103
+Graph-based Entity Resolution,5737,1204,115,31,14,18,121
+Semantic Matching Entity Resolution,30150,788,81,16,4,0,0
+Deep Learning Entity Resolution,181,2,0,0,0,0,65
